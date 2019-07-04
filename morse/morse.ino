@@ -1,7 +1,7 @@
 #include <Morse.h>
  
 Morse morse(13);
-int incomingByte = 0;
+int income = 0;
  
 void setup()
 {
@@ -10,10 +10,11 @@ void setup()
 
 void loop(){
   if(Serial.available() > 0){
-    incomingByte = Serial.read();
+    income = Serial.read();
   }
   
-    switch(incomingByte){
+    switch(incomte){
+      case 32:morse.w_space();break;
       case 97:morse.dot();morse.dash();morse.c_space();break;
       case 98:morse.dash();morse.dot();morse.dot();morse.dot();morse.c_space();break;
       case 99:morse.dash();morse.dot();morse.dash();morse.dot();morse.c_space();break;
@@ -40,7 +41,7 @@ void loop(){
       case 120:morse.dash();morse.dot();morse.dot();morse.dash();morse.c_space();break;
       case 121:morse.dash();morse.dot();morse.dash();morse.dash();morse.c_space();break;
       case 122:morse.dash();morse.dash();morse.dot();morse.dot();morse.c_space();break;
-      case 32:morse.w_space();break;
+     
     }
   
 }
