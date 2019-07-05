@@ -13,7 +13,7 @@ void loop(){
     income = Serial.read();
   }
   
-    switch(incomte){
+    switch(income){
       case 32:morse.w_space();break;
       case 97:morse.dot();morse.dash();morse.c_space();break;
       case 98:morse.dash();morse.dot();morse.dot();morse.dot();morse.c_space();break;
